@@ -1,55 +1,113 @@
-/*
-  CSS File
-*/
-
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
+body{
+    background-image: url("orange-background.jpg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    margin: 5vh 27vw;
+}
+.main{
+    background-color: rgb(105, 149, 107,0.6);
+    padding: 3vw;
+    border-radius: 1vw;
+}
+.inner-main{
+    background-color:#fbf3eb;
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow:0px 0.2vh 1vh #6c796d ;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-size: 2.5vw;
+    color: #2d402e;
+    text-shadow: 0.15vh 0.15vh 0.5vh #6c796d;
+}
+#welcome{
+    text-align: center;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-size: 1.5vw;
+    color: #2d402e;
+}
+#start-button{
+    background-color: #69956b;
+    margin: 5vh 10vw;
+    padding: 2vh;
+    border-width: 0;
+    border-radius: 1vh;
+    align-items: center;
+    color: #fbf3eb;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    text-align: center;
+    font-size: 1.5vw;  
+    box-shadow: 0px 0.5vh 0.5vh #6c796d;
+    top:0;
+    position: relative;
+    transition: top ease 0.4s;
+}
+#start-button:hover{
+    background-color: #2d402e;
+    top:-0.3vh;
+}
+#task-input{
+    border-radius: 5px;
+    padding: 1vh;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-size: 1.5vw;
+}
+#add-task{
+    background-color: #69956b;
+    margin: 2vh 15vw;
+    margin-top: 3vh;
+    padding: 2vh;
+    border-width: 0;
+    border-radius: 1vh;
+    cursor: pointer;
+    color: #fbf3eb;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    text-align: center;
+    font-size: 1.5vw;  
+    box-shadow: 0px 0.5vh 0.5vh #6c796d;
+    position: relative;
+    transition: top ease 0.4s;
+}
+#add-task:hover{
+    top:-0.3vh;
+    background-color: #2d402e;
+}
+ul{
+    margin-top: 4vh;
+    list-style-type: none;
+}
+li{
+    padding: 2vh;
+    background-color: rgb(105, 149, 107,0.3);
+    color:#2d402e;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    text-align:left;
+    font-size: 1.5vw;  
+    overflow-wrap: break-word;
+    transition: 0.4s;
+}
+li:nth-child(even) {
+    background-color:rgb(105, 149, 107,0.7);
+}
+li:hover{
+    color: #fbf3eb;
+    background-color: #2d402e;
 }
 
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+
+.remove{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
 }
-
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  
+.remove:hover{
+    background-color: #f44336;
+    color: white;
 }
