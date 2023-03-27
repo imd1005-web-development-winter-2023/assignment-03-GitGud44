@@ -53,13 +53,13 @@ function addTask(e)
         totalTasks.innerHTML=tasks.length;
         totalTasks.append(totalTasksMessage);
         form.appendChild(totalTasks);
-        //appendCloseButton(newTask,tasks[]);
+        appendCloseButton(newTask);
     }
     
     document.getElementById("task-input").value="";
 }
 
-function appendCloseButton(task,index)
+function appendCloseButton(task)
 {
     let span = document.createElement("SPAN");
     let x = document.createTextNode("\u00D7");
